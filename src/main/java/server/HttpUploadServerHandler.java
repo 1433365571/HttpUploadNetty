@@ -137,7 +137,7 @@ public class HttpUploadServerHandler extends SimpleChannelInboundHandler<HttpObj
                 "</head>\n" +
                 "<body>\n" +
                 "\n" +
-                "<form action=\"http://127.0.0.1:8080/post_multipart\" enctype=\"multipart/form-data\" method=\"POST\">\n" +
+                "<form action=\"http://114.67.87.85:8080/post_multipart\" enctype=\"multipart/form-data\" method=\"POST\">\n" +
                 "\n" +
                 "\n" +
                 "    <input type=\"file\" name=" +
@@ -171,7 +171,7 @@ public class HttpUploadServerHandler extends SimpleChannelInboundHandler<HttpObj
 
                         fileUpload.isInMemory();// tells if the file is in Memory
                         // or on File
-                        fileUpload.renameTo(new File(PathUtil.getFileBasePath() + fileUpload.getFilename())); // enable to move into another
+                        fileUpload.renameTo(new File(PathUtil.getFileBasePath() +"/"+ fileUpload.getFilename())); // enable to move into another
                         // File dest
                         decoder.removeHttpDataFromClean(fileUpload); //remove
 
