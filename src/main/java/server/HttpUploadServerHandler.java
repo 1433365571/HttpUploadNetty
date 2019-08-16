@@ -159,8 +159,10 @@ public class HttpUploadServerHandler extends SimpleChannelInboundHandler<HttpObj
 
     private void readHttpDataChunkByChunk() throws IOException {
 
+        // while 是为了接受完整数据后处理
         while (decoder.hasNext()) {
 
+             // 获得文件数据
             InterfaceHttpData data = decoder.next();
 
             if (data != null) {
